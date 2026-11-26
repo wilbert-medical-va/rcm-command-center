@@ -1,0 +1,52 @@
+{
+  "CO-16": {
+    "title": "Claim/Service Lacks Information or Has Submission/Billing Error(s)",
+    "root_cause": "Front-End / Coding",
+    "action_checklist": [
+      "Verify patient subscriber ID, group number, and date of birth against eligibility portal.",
+      "Confirm referring/ordering provider NPI is populated in Box 17/17b.",
+      "Check if required modifier (e.g., -25, -59, -KX, -NU) was omitted."
+    ],
+    "appeal_template": "Re: Corrected Claim / Missing Information Resubmission (CARC CO-16)\n\nPlease reprocess the attached claim for Date of Service {dos}. The omitted/corrected billing information ({missing_detail}) has been updated and verified against the patient's active policy. Kindly adjudicate per the contracted fee schedule."
+  },
+  "CO-97": {
+    "title": "Benefit Included in Payment/Allowance for Another Service/Procedure",
+    "root_cause": "Mid-Cycle / Coding",
+    "action_checklist": [
+      "Review NCCI (National Correct Coding Initiative) bundling edits for the CPT/HCPCS pair.",
+      "Verify clinical documentation supports a distinct procedural service or separate evaluation.",
+      "Append appropriate modifier (-25 for distinct E/M, -59 or -XS/-XE for distinct procedure) if supported by chart notes."
+    ],
+    "appeal_template": "Re: Formal Appeal for Unbundling / Distinct Service (CARC CO-97)\n\nWe respectfully request reconsideration of CPT {cpt} billed on {dos}. As documented in the enclosed clinical progress notes, this procedure/evaluation was distinct, separately identifiable, and medically necessary outside the global/bundled service. Modifier {modifier} applies. Please reprocess for separate reimbursement."
+  },
+  "CO-197": {
+    "title": "Precertification/Authorization/Notification Absent",
+    "root_cause": "Front-End / Authorization",
+    "action_checklist": [
+      "Locate valid prior authorization number and effective date range in EHR/portal.",
+      "If auth was obtained post-service or retro-auth applies, attach payer confirmation log.",
+      "Confirm rendering provider NPI and CPT/HCPCS code match the approved authorization."
+    ],
+    "appeal_template": "Re: Prior Authorization Verification & Reconsideration (CARC CO-197)\n\nPlease reconsider the denial on {dos} for CPT/HCPCS {cpt}. Valid authorization #{auth_number} was secured for this service within the active coverage window (proof of authorization attached). Kindly overturn the CO-197 denial and process payment."
+  },
+  "PR-1": {
+    "title": "Deductible Amount (Patient Responsibility)",
+    "root_cause": "Patient Responsibility",
+    "action_checklist": [
+      "Verify remaining annual deductible in payer portal to confirm accuracy.",
+      "Check if patient has active secondary coverage (e.g., Medicare Supplement / Medigap) for crossover.",
+      "Transfer balance to secondary payer or generate itemized patient statement."
+    ],
+    "appeal_template": "Patient Statement / Secondary Crossover Notice (CARC PR-1)\n\nPer the primary Explanation of Benefits (EOB) for {dos}, ${patient_resp} was applied toward the patient's annual deductible. Routing balance to secondary policy / patient statement queue."
+  },
+  "CO-29": {
+    "title": "The Time Limit for Filing Has Expired",
+    "root_cause": "Back-End / Timely Filing",
+    "action_checklist": [
+      "Pull original clearinghouse batch acceptance report (277CA) showing initial timely submission.",
+      "Verify if claim was originally sent to a prior/incorrect payer in good faith.",
+      "Submit timely filing appeal with clearinghouse timestamp proof within payer reconsideration window."
+    ],
+    "appeal_template": "Re: Timely Filing Proof Appeal (CARC CO-29)\n\nEnclosed is the clearinghouse electronic acceptance receipt confirming that Claim #{claim_id} for {dos} was originally transmitted and accepted within your contracted timely filing window. Please reopen and adjudicate this claim accordingly."
+  }
+}
