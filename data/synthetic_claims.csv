@@ -1,0 +1,16 @@
+claim_id,patient_name,member_id,payer,plan_type,dos,cpt_hcpcs,modifier,icd10,prior_auth_status,billed_amount,expected_allowed,paid_amount,contractual_adj,patient_resp,status,carc_code,days_in_ar,timely_filing_limit_days,notes
+CLM-1001,Elena Vance,MCR994821A,Medicare + AARP Medigap,Medicare Supplement,2026-10-02,E0601,RR,G47.33,Approved (#PA-8821),145.00,112.50,112.50,32.50,0.00,Paid,,14,365,CPAP rental paid in full via Medigap crossover
+CLM-1002,Marcus Sterling,UHC7734109,UnitedHealthcare,Commercial PPO,2026-10-05,99214,25,E11.9,Not Required,210.00,148.00,148.00,62.00,0.00,Paid,,18,90,Office visit paid per fee schedule
+CLM-1003,Hannah Alverez,AET4421902,Aetna,Commercial HMO,2026-09-12,99214,,I10,Not Required,210.00,145.00,0.00,0.00,0.00,Denied,CO-97,75,90,Billed with EKG 93000 without modifier -25
+CLM-1004,David Kowalski,BCBS882104,Blue Cross Blue Shield,Commercial PPO,2026-08-20,E0470,NU,G47.33,Missing,980.00,760.00,0.00,0.00,0.00,Denied,CO-197,98,180,BiPAP purchase denied - auth number omitted on claim
+CLM-1005,Sofia Mendoza,HUM5512098,Humana,Medicare Advantage,2026-10-18,99213,,J06.9,Not Required,165.00,104.00,82.00,61.00,0.00,Underpaid,,39,180,Paid $22.00 below contracted fee schedule
+CLM-1006,Arthur Pendelton,MCR330192B,Medicare + Mutual of Omaha,Medicare Supplement,2026-09-28,L0650,KX,M54.50,Approved (#PA-7710),1150.00,895.00,895.00,255.00,0.00,Paid,,25,365,Lumbar orthosis paid cleanly with KX modifier
+CLM-1007,Chloe Bennett,CIG6629104,Cigna,Commercial EPO,2026-09-01,20610,RT,M17.11,Not Required,295.00,198.00,0.00,0.00,0.00,Denied,CO-16,86,90,Referring provider NPI missing in Box 17b - urgent timely filing
+CLM-1008,Raymond Cho,UHC9910234,UnitedHealthcare,Commercial PPO,2026-10-25,99214,,E78.5,Not Required,210.00,148.00,0.00,0.00,148.00,Patient Balance,PR-1,32,90,Applied to annual deductible - verify portal & send statement
+CLM-1009,Nadia Okafor,AET1109283,Aetna,Commercial PPO,2026-11-22,E0601,,G47.33,Expired,145.00,112.50,0.00,0.00,0.00,Ready to Scrub,,4,90,Missing RR rental modifier and prior auth expired 2026-11-01
+CLM-1010,George Miller,MCR882716C,Medicare Part B,Medicare Fee-for-Service,2026-11-23,99215,,I50.9,Not Required,285.00,192.00,0.00,0.00,0.00,Ready to Scrub,,3,365,Clean high-complexity visit ready for clearinghouse batch
+CLM-1011,Tessa Lindqvist,BCBS554019,Blue Cross Blue Shield,Commercial HMO,2026-07-15,93000,,R00.2,Not Required,120.00,78.00,0.00,0.00,0.00,Denied,CO-29,134,120,Clearinghouse 277CA proves original submission on 2026-07-20
+CLM-1012,Victor Reyes,HUM9023812,Humana,Medicare Advantage,2026-11-24,A7030,,G47.33,Approved (#PA-9012),185.00,142.00,0.00,0.00,0.00,Ready to Scrub,,2,180,CPAP full face mask supply - missing NU modifier
+CLM-1013,Priya Nair,CIG4410928,Cigna,Commercial PPO,2026-10-10,99214,25,K21.9,Not Required,210.00,152.00,152.00,58.00,0.00,Paid,,21,90,Paid accurately on first pass
+CLM-1014,Walter Briggs,MCR661529D,Medicare + Anthem Medigap,Medicare Supplement,2026-10-14,E0431,RR,J44.9,Approved (#PA-8904),95.00,74.00,59.20,21.00,0.00,Underpaid,,43,365,Secondary Medigap crossover 20% coinsurance ($14.80) not posted
+CLM-1015,Isabelle Laurent,UHC3391028,UnitedHealthcare,Commercial PPO,2026-11-25,,25,M25.561,Not Required,190.00,130.00,0.00,0.00,0.00,Ready to Scrub,,1,90,Missing CPT code on superbill encounter
